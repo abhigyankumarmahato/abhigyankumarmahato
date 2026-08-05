@@ -56,7 +56,7 @@
       <td width="50%" align="center" style="border: none;">
         <!-- Neon Cyber Stats Card -->
         <a href="https://github.com/abhigyankumarmahato">
-          <img src="https://github-stats-extended.vercel.app/api?username=abhigyankumarmahato&show_icons=true&title_color=ff007f&text_color=ffffff&icon_color=00f3ff&bg_color=030712&hide_border=true" alt="Cyber Stats" width="100%" />
+          <img src="./github_stats.svg" alt="Cyber Stats" width="100%" />
         </a>
       </td>
       <td width="50%" align="center" style="border: none;">
