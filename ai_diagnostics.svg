@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="220" viewBox="0 0 800 220" fill="none">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600;700;900&amp;family=Share+Tech+Mono&amp;display=swap');
+    .tech-font { font-family: 'Share Tech Mono', monospace; fill: #8b949e; font-size: 13px; }
+    .neon-text { font-family: 'Orbitron', sans-serif; font-size: 15px; fill: #00f3ff; font-weight: 700; filter: drop-shadow(0 0 3px #00f3ff); }
+    .accent-text { font-family: 'Orbitron', sans-serif; font-size: 12px; fill: #ff007f; font-weight: 700; }
+    
+    @keyframes pulse {
+      0% { r: 8; opacity: 0.3; }
+      50% { r: 18; opacity: 0.9; }
+      100% { r: 8; opacity: 0.3; }
+    }
+    @keyframes pulse-ring {
+      0% { r: 15; opacity: 0.2; }
+      50% { r: 35; opacity: 0.7; }
+      100% { r: 15; opacity: 0.2; }
+    }
+    @keyframes core-glow {
+      0%, 100% { filter: drop-shadow(0 0 4px #00f3ff); fill: #00f3ff; }
+      50% { filter: drop-shadow(0 0 12px #ff007f); fill: #ff007f; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 1; }
+    }
+    @keyframes progress-fill {
+      0% { width: 0px; }
+      50% { width: 480px; }
+      100% { width: 234px; }
+    }
+    @keyframes progress-fill-2 {
+      0% { width: 52px; }
+      50% { width: 490px; }
+      100% { width: 390px; }
+    }
+    @keyframes signal-flow {
+      0% { stroke-dashoffset: 24; }
+      100% { stroke-dashoffset: 0; }
+    }
+    
+    .pulse-node { animation: pulse 3s infinite ease-in-out; }
+    .pulse-ring-element { animation: pulse-ring 4s infinite ease-in-out; }
+    .core { animation: core-glow 6s infinite ease-in-out; }
+    .blinker { animation: blink 1s infinite steps(2); }
+    .fast-blinker { animation: blink 0.5s infinite steps(2); }
+    .bar-fill-1 { animation: progress-fill 8s infinite ease-in-out; }
+    .bar-fill-2 { animation: progress-fill-2 6s infinite ease-in-out; }
+    .flow-line { stroke-dasharray: 8, 4; animation: signal-flow 1.5s infinite linear; }
+  </style>
+
+  <!-- Card background -->
+  <rect x="0.5" y="0.5" width="799" height="219" rx="12" fill="#030712" stroke="#1f2937" stroke-width="1.5"/>
+
+  <!-- Grid decoration lines -->
+  <g opacity="0.05">
+    <path d="M 50 0 L 50 220 M 100 0 L 100 220 M 150 0 L 150 220 M 200 0 L 200 220 M 250 0 L 250 220 M 300 0 L 300 220 M 350 0 L 350 220 M 400 0 L 400 220 M 450 0 L 450 220 M 500 0 L 500 220 M 550 0 L 550 220 M 600 0 L 600 220 M 650 0 L 650 220 M 700 0 L 700 220 M 750 0 L 750 220" stroke="#00f3ff" stroke-width="1"/>
+    <path d="M 0 50 L 800 50 M 0 100 L 800 100 M 0 150 L 800 150 M 0 200 L 800 200" stroke="#00f3ff" stroke-width="1"/>
+  </g>
+
+  <!-- LEFT: Neural Net Core (AI Theme) -->
+  <g transform="translate(110, 110)">
+    <!-- Connecting flow paths -->
+    <path d="M -70 -50 L 0 0 M -70 50 L 0 0 M 70 -50 L 0 0 M 70 50 L 0 0 M -80 0 L 0 0 M 80 0 L 0 0" stroke="#1f2937" stroke-width="2" />
+    <path d="M -70 -50 L 0 0 M -70 50 L 0 0 M 70 -50 L 0 0 M 70 50 L 0 0 M -80 0 L 0 0 M 80 0 L 0 0" stroke="#00f3ff" stroke-width="2" class="flow-line" opacity="0.6"/>
+
+    <!-- Neural Ring and Outer Shells -->
+    <circle r="45" stroke="#1f2937" stroke-width="1" fill="none" />
+    <circle r="30" stroke="#ff007f" stroke-width="1" stroke-dasharray="4, 4" fill="none" class="blinker" opacity="0.5"/>
+    <circle r="15" class="pulse-ring-element" fill="none" stroke="#00f3ff" stroke-width="1.5" />
+
+    <!-- Core Node -->
+    <circle r="8" class="core" />
+    
+    <!-- Outer Nodes -->
+    <circle cx="-70" cy="-50" r="5" fill="#00f3ff" class="pulse-node" />
+    <circle cx="-70" cy="50" r="5" fill="#00f3ff" />
+    <circle cx="70" cy="-50" r="5" fill="#ff007f" />
+    <circle cx="70" cy="50" r="5" fill="#00f3ff" class="pulse-node" />
+    <circle cx="-80" cy="0" r="5" fill="#ff007f" class="pulse-node" />
+    <circle cx="80" cy="0" r="5" fill="#00f3ff" />
+  </g>
+
+  <!-- Divider line -->
+  <line x1="220" y1="20" x2="220" y2="200" stroke="#1f2937" stroke-width="1" />
+
+  <!-- RIGHT: AI & Full-Stack Metrics & Real-time Compilation Status -->
+  <g transform="translate(240, 30)">
+    <!-- Header -->
+    <text x="0" y="15" class="neon-text">SYSTEM PROCESSOR INFERENCE</text>
+    <text x="350" y="15" class="accent-text blinker">[ ONLINE ]</text>
+
+    <!-- AI Epoch / Training telemetry -->
+    <g transform="translate(0, 35)">
+      <text x="0" y="15" class="tech-font" fill="#fff">Neural Engine Training Loop</text>
+      <text x="350" y="15" class="tech-font" fill="#ff007f">Loss: 0.021 | Accuracy: 99.1%</text>
+      <!-- Background Bar -->
+      <rect x="0" y="23" width="520" height="8" rx="4" fill="#111827" stroke="#1f2937" stroke-width="1" />
+      <!-- Animated Active Bar -->
+      <rect x="0" y="23" width="450" height="8" rx="4" fill="url(#ai-gradient)" class="bar-fill-1" />
+    </g>
+
+    <!-- Full-Stack Compiler Load -->
+    <g transform="translate(0, 85)">
+      <text x="0" y="15" class="tech-font" fill="#fff">Full-Stack Application Pipeline</text>
+      <text x="350" y="15" class="tech-font" fill="#00f3ff">94% Client-Server Health</text>
+      <!-- Background Bar -->
+      <rect x="0" y="23" width="520" height="8" rx="4" fill="#111827" stroke="#1f2937" stroke-width="1" />
+      <!-- Animated Active Bar -->
+      <rect x="0" y="23" width="480" height="8" rx="4" fill="url(#fs-gradient)" class="bar-fill-2" />
+    </g>
+
+    <!-- Real-time Console Log -->
+    <g transform="translate(0, 140)">
+      <text x="0" y="12" class="tech-font" style="font-size: 11px;" fill="#6b7280">> abhigyan@neural-core:~$ python train_agent.py --backprop</text>
+      <text x="0" y="26" class="tech-font" style="font-size: 11px;" fill="#00f3ff">> COMPILING FULL-STACK ARRAYS... STACK: REACT / TS / PYTHON / ML <tspan class="fast-blinker">_</tspan></text>
+    </g>
+  </g>
+
+  <!-- Gradients Definition -->
+  <defs>
+    <linearGradient id="ai-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ff0055" />
+      <stop offset="100%" stop-color="#ff007f" />
+    </linearGradient>
+    <linearGradient id="fs-gradient" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#0055ff" />
+      <stop offset="100%" stop-color="#00f3ff" />
+    </linearGradient>
+  </defs>
+</svg>
