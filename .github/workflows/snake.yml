@@ -21,6 +21,9 @@ jobs:
     timeout-minutes: 5
     
     steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
       # Generates a snake game from a github user ($GITHUB_REPOSITORY_OWNER) contributions graph, output a svg animation at <summary_gif_path>
       - name: Generate github-contribution-grid-snake.svg
         uses: Platane/snk/svg-only@v3
