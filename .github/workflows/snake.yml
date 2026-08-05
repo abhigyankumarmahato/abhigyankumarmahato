@@ -38,7 +38,7 @@ jobs:
       # Push the content of <build_dir> to a branch
       # The content will be available at https://raw.githubusercontent.com/<username>/<repo>/<target_branch>/<file> , or as github page
       - name: Push github-contribution-grid-snake.svg to GitHub Pages / Output Branch
-        uses: crazy-max/ghaction-github-pages@v3.5.0
+        uses: crazy-max/ghaction-github-pages@v3
         with:
           target_branch: output
           build_dir: dist
